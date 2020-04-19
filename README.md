@@ -1,2 +1,2 @@
-# TinyC_EventsSystem
-A super tiny C events system, just add your enums for ids.
+# SuperTinyEventsSystem
+You can use this library to create events which can be subscribed to.
