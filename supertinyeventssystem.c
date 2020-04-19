@@ -38,6 +38,9 @@ void TriggerEvent(enum EVENTS eventID)
 {
     for (uint32_t i = 0U; i < EventRegisterCount; i++)
     {
-        EventRegister[i].m_eventCallback();
+        if (EventRegister[i].m_eventID == eventID)
+        {
+			EventRegister[i].m_eventCallback();
+		}
     }
 }
