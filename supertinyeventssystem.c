@@ -20,15 +20,17 @@ static uint32_t EventRegisterCount = 0;
 static EventSubscription EventRegister[EVENT_REGISTER_MAX_NUMBER];
 
 void SubscribeToEvent(enum EVENTS eventID, EventFunc callback)
-{
-    EventRegister[EventRegisterCount].m_eventID = eventID;
-    EventRegister[EventRegisterCount].m_eventCallback = callback;
-    
-    EventRegisterCount++;
-    
+{   
     if (EventRegisterCount >= EVENT_REGISTER_MAX_NUMBER)
     {
-        throw -1;
+        //throw -1;
+    }
+    else
+    {
+        EventRegister[EventRegisterCount].m_eventID = eventID;
+        EventRegister[EventRegisterCount].m_eventCallback = callback;
+
+        EventRegisterCount++;
     }
 }
 
