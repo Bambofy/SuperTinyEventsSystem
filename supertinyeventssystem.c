@@ -5,7 +5,7 @@
  */
 enum EVENTS
 {
-    BLOB_DEATH
+    // e.g. BLOB_DEATH
 };
 
 typedef void(*EventFunc)(void); // function callback
